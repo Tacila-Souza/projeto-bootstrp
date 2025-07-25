@@ -1,0 +1,324 @@
+/* ==============================================
+ARQUIVO DE ESTILO GLOBAL - LANDING PAGE SENAI
+==============================================
+*/
+
+/* Variáveis de Cor e Fontes */
+:root {
+    --senai-red: #E5231B;
+    --senai-dark: #212529;
+    --senai-gray: #f8f9fa;
+}
+
+/* Estilos Gerais do Corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--senai-gray);
+}
+
+/* Container para páginas com pouco conteúdo (fixa o rodapé) */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+/*
+==============================================
+BARRA DE NAVEGAÇÃO (NAVBAR)
+==============================================
+*/
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--senai-dark);
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--senai-red);
+}
+
+.btn-inscreva-se {
+    background-color: var(--senai-red);
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscreva-se:hover {
+    background-color: #c41a12;
+}
+
+.btn-login {
+    color: var(--senai-dark);
+    font-weight: 600;
+}
+
+.btn-login:hover {
+    color: var(--senai-red);
+}
+
+.navbar-toggler {
+    border-color: var(--senai-red);
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(229, 35, 27, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(229, 35, 27, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/*
+==============================================
+SEÇÕES DA PÁGINA INICIAL
+==============================================
+*/
+
+/* Hero (Banner Principal) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop') center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.btn-cta-hero {
+    background-color: var(--senai-red);
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-hero:hover {
+    background-color: #c41a12;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Títulos de Seção e Ícones */
+.section-title {
+    font-weight: 700;
+    color: var(--senai-dark);
+    margin-bottom: 40px;
+}
+
+.icon-box {
+    color: var(--senai-red);
+    font-size: 2.5rem;
+}
+
+/* Seção Professor com espaçamento ajustado */
+.professor-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.professor-card {
+    background-color: var(--senai-gray);
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.professor-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+/* Grade Curricular */
+.grade-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-left: 4px solid var(--senai-red);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    font-weight: 500;
+}
+
+.grade-item .icon {
+    color: var(--senai-red);
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Depoimentos (Carrossel) */
+.carousel .carousel-inner {
+    padding-bottom: 40px;
+}
+
+.testimonial-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card .icon-user {
+    font-size: 3rem;
+    color: #ccc;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: auto;
+    transform: translateY(-20px);
+}
+
+.carousel-control-prev {
+    left: -15px;
+}
+.carousel-control-next {
+    right: -15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(229, 35, 27, 0.8);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/*
+==============================================
+PÁGINA DO PROFESSOR
+==============================================
+*/
+.page-header {
+    background-color: var(--senai-dark);
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.experience-card {
+    background-color: white;
+    border: none;
+    border-left: 5px solid var(--senai-red);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.experience-card h5 {
+    color: var(--senai-dark);
+    font-weight: 700;
+}
+
+.experience-card .company {
+    font-weight: 600;
+    color: var(--senai-red);
+}
+
+.experience-card .duration {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+
+/*
+==============================================
+PÁGINAS DE FORMULÁRIO (CADASTRO, LOGIN, INSCRIÇÃO)
+==============================================
+*/
+.form-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-card {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.07);
+}
+
+.form-section-title {
+    font-weight: 600;
+    color: var(--senai-red);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-senai {
+    background-color: var(--senai-red);
+    color: white;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: none;
+}
+
+.btn-senai:hover {
+    background-color: #c41a12;
+    color: white;
+}
+
+.btn-senai:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.captcha-box img {
+    border-radius: 5px 0 0 5px;
+}
+
+.captcha-box .form-control {
+    border-radius: 0 5px 5px 0;
+}
+
+/*
+==============================================
+RODAPÉ (FOOTER)
+==============================================
+*/
+footer {
+    background-color: var(--senai-dark);
+    color: white;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--senai-red);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
